@@ -7,7 +7,7 @@ Vagrant.configure(2) do |config|
      # Display the VirtualBox GUI when booting the machine
      vb.gui = true
   end
-
+#update apt-get, then install tomcat app server and gradle for build system
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
     sudo apt-get install -y tomcat8

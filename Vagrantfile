@@ -10,6 +10,7 @@ Vagrant.configure(2) do |config|
   
   #update apt-get, then install tomcat app server and gradle for build system
   config.vm.provision "shell", inline: <<-SHELL
+    sudo add-apt-repository ppa:cwchien/gradle
     sudo apt-get update
     sudo apt-get install -y tomcat8
     sudo apt-get install -y gradle
